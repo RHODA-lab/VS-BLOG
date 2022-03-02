@@ -16,7 +16,7 @@ For the cluster administrators, the proliferation of instances and types of data
 
 ![alt_text](images/image1.png "image_tooltip")
 
-
+![challenges](images/challenge.png)
 Red Hat has developed a new add-on service, Red Hat OpenShift Database Access, that makes it easier for administrators to provision and manage access to multiple 3rd party database services. OpenShift Database Access also helps developers to connect their applications to database services with a consistent and predictable experience, without bothering administrators and needing to learn the nuances of database service provider’s access requirements.
 
 **Solution: Red Hat OpenShift Database Access (RHODA)**
