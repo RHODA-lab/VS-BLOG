@@ -103,7 +103,7 @@ To learn more, watch the two demo videos or visit [red.ht/dbaccess](http://red.h
 
 
 
-* [IT Ops demo video](red.ht/dbaccess_ops_demo)
-* [Developer demo video](red.ht/dbaccess_dev_demo)
+* [IT Ops demo video](http://red.ht/dbaccess_ops_demo)
+* [Developer demo video](http://red.ht/dbaccess_dev_demo)
 
 You can also test the instructions covered in this blog by getting an OpenShift cluster with RHODA pre-installed at the **[Sandbox](https://developers.redhat.com/developer-sandbox/get-started)** website, it's free!
