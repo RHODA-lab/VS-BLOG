@@ -1,5 +1,32 @@
+<!-- Output copied to clipboard! -->
+
+<!-----
+
+Yay, no errors, warnings, or alerts!
+
+Conversion time: 0.408 seconds.
+
+
+Using this Markdown file:
+
+1. Paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
+
+Conversion notes:
+
+* Docs to Markdown version 1.0β33
+* Tue Mar 01 2022 19:19:57 GMT-0800 (PST)
+* Source doc: Doc to github - Simplifying Managed Database Access in OpenShift
+----->
+
+
+
 ## Simplifying Managed Database Access on OpenShift
+
 March 4, 2022 | Will McGrath & Veda Shankar
+
 
 #### **Introduction**
 
@@ -9,14 +36,8 @@ For the cluster administrators, the proliferation of instances and types of data
 
 **Challenges for ad hoc DBaaS in the Enterprise**
 
+![challenge](images/challenge.png "The Challenge")
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-![challenges](images/challenge.png)
 Red Hat has developed a new add-on service, Red Hat OpenShift Database Access, that makes it easier for administrators to provision and manage access to multiple 3rd party database services. OpenShift Database Access also helps developers to connect their applications to database services with a consistent and predictable experience, without bothering administrators and needing to learn the nuances of database service provider’s access requirements.
 
 **Solution: Red Hat OpenShift Database Access (RHODA)**
@@ -27,25 +48,13 @@ Red Hat has developed a new add-on service, Red Hat OpenShift Database Access, t
 * More efficient connection, DB utilization
 * Centralized monitoring, consistent control plane for admins
 
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
-
+![solution](images/solution.png "The Solution")
 
 Red Hat OpenShift Database Access is available on two OpenShift cloud services - OpenShift Dedicated  and OpenShift Service on AWS.  Initially, it supports three database vendor offerings - MongoDB Atlas, a popular cloud database service, Crunchy Data’s Crunchy Bridge which provides a managed PostgreSQL cloud service, and CockroachDB Dedicated, a distributed SQL database service.
 
 **High Level Architecture of OpenShift Database Access**
 
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
-
+![architecture](images/rhoda-arch.png "Architecture")
 
 
 #### **Installing Red Hat OpenShift Database Access on Managed OpenShift Cluster**
@@ -72,38 +81,20 @@ The appendix section of the [Quick Start Guide](https://access.redhat.com/docume
 
 A Provider Account on RHODA represents an account with a cloud database provider, and you need the authentication credentials for the database account to create it. Using the Cluster Administrator role go to **Data Services** -> **Database Access** on OpenShift’s left-hand navigation menu. Also, you need to select the **openshift-dbass-operator** namespace in order to create the provider account. Initially, there are no provider accounts and you will need to create one using the **Create -> Database Provider Account** option. Use the Create Provider Account form to assign a unique name to the provider account and select the database provider from the drop down menu and supply the account credentials associated with the provider account. For detailed instructions follow the instructions in the **Creating A Provider Account Resource** section of the [Quick Start Guide](https://access.redhat.com/documentation/en-us/red_hat_openshift_database_access/1/html-single/quick_start_guide/index). 
 
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
-
+![provider account](images/provider-account-create.png "Create Provider Account")
 
 Once the discovery of the provider platform account is successful, RHODA will discover all the database instances associated with the provider account and add it to the database inventory.
 
 As you add provider accounts and application developers start adding connections to the databases. The database inventory table will get updated and you can see the table with information on what application is connecting to which database instance when you navigate to **Data Services** -> **Database Access**.
 
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
-
+![inventory](images/inventory-table.png "Inventory Table")
 
 
 #### **OpenShift Administrator - Create a Database Instance**
 
 Once a Provider Account is created, you can create a new database instance by using the **Create -> Database Instance** option in the drop down menu on the OpenShift Database Access status page. You will use the provider account you created for the database provider to create the new instance. The example below shows the creation of a new Mongo Atlas Project under the Organization corresponding to the MongoDB Atlas provider account you created previously.
 
-
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.png "image_tooltip")
-
+![DB instance](images/database-instance-create.png "Create DB Instance")
 
 If successful, you will see that the new database instance has been added to the database inventory table.
 
@@ -116,13 +107,7 @@ If successful, you will see that the new database instance has been added to the
 
 Once the Administrator has created the Provider Accounts, the Developer can connect to a database instance to their application workspace. The **Connected Database** category is available on the **Developer Catalog** section which contains the tiles for the different vendors that have been provisioned. 
 
-
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image7.png "image_tooltip")
-
+![DB Connected](images/connected-databases.png "Connected Databases")
 
 Adding a database connection to your application namespace creates the Config Map and Secret objects that will allow your application to access the database. Refer to the **Connecting to an External Database Instance** section in the [Quick Start Guide](https://access.redhat.com/documentation/en-us/red_hat_openshift_database_access/1/html-single/quick_start_guide/index) for detailed instructions.
 
@@ -133,13 +118,7 @@ The Kubernetes Service Binding feature was introduced to bring consistency to th
 
 After connecting to the database instance in the previous step, you should now see the application alongside the database instance in the **Topology** view of your namespace. You can Click and drag the arrow from the application to the database instance to create a service binding connector.
 
-
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image8.png "image_tooltip")
-
+![Service Binding](images/service-binding.png "Service Binding")
 
 The Service Binding creates a volume on the application POD and organizes the information needed to connect to the database in a directory structure and exposes the volume mount point as an environment variable. Developer frameworks like [Quarkus](https://www.redhat.com/en/topics/cloud-native-apps/what-is-quarkus) are already service binding aware and can automatically connect to the database using this injected workload information without needing to embed database connection information in the source code. The following demo application for [Quarkus MongoDB](https://github.com/RHEcosystemAppEng/mongo-quickstart) and [Quarkus Postgres](https://github.com/RHEcosystemAppEng/postgresql-orm-quickstart) illustrates the use of service binding for connecting to database instances.
 
