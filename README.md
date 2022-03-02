@@ -1,31 +1,6 @@
-<!-- Output copied to clipboard! -->
-
-<!-----
-
-Yay, no errors, warnings, or alerts!
-
-Conversion time: 0.408 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β33
-* Tue Mar 01 2022 19:19:57 GMT-0800 (PST)
-* Source doc: Doc to github - Simplifying Managed Database Access in OpenShift
------>
-
-
-
 ## Simplifying Managed Database Access on OpenShift
 
-March 4, 2022 | Will McGrath & Veda Shankar
+March 7, 2022 | Will McGrath & Veda Shankar
 
 
 #### **Introduction**
