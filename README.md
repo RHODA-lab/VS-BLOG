@@ -1,6 +1,6 @@
 ## Simplifying Managed Database Access on OpenShift
 
-March 7, 2022 | Will McGrath & Veda Shankar
+March 10, 2022 | Will McGrath & Veda Shankar
 
 
 #### **Introduction**
