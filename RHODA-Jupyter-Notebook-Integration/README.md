@@ -3,7 +3,7 @@
 
 #### June 20, 2022 | by Michelle DiPalma & Veda Shankar
 
-Integrating Jupyter notebooks with OpenShift cloud services allows data scientists to get started quickly, without having to understand or manage any of the OpenShift infrastructure details. This **[video](https://youtu.be/VRcSZBqw3zc)** demonstrates the service binding between a Jupyter notebook and the Red Hat OpenShift Database Access connection to database cloud services. This allows a notebook user to access database instances without ever leaving their notebook to obtain credentials. 
+Integrating Jupyter notebooks with OpenShift cloud services allows data scientists to get started quickly, without having to understand or manage any of the OpenShift infrastructure details. This **[video](https://youtu.be/VRcSZBqw3zc)** demonstrates the service binding between a Jupyter notebook and the Red Hat OpenShift Database Access connection to database cloud services. This allows a notebook user to access database instances without ever leaving their notebook to obtain credentials. The recipe described in this video assumes that the [Kubeflow Notebook Controller](https://www.kubeflow.org/docs/components/notebooks/overview/) has been installed on your OpenShift cluster, and you have a basic working knowledge of [OpenShift](https://developers.redhat.com/learn), [Jupyter Notebooks](https://github.com/jupyterlab/jupyterlab) and [RHODA](https://access.redhat.com/documentation/en-us/red_hat_openshift_database_access/1/html-single/quick_start_guide/index?extIdCarryOver=true&sc_cid=7013a0000030vrlAAA).
 
 
 ![architecture](images/RHODA_Jupyter.jpg "High-Level Architecture")
